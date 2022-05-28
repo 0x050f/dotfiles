@@ -20,6 +20,8 @@
 	let g:lightline.colorscheme = 'edge'
 	set laststatus=2
 
+	let g:rainbow_active = 1
+
 	"" colorscheme
 	let g:edge_style = 'neon'
 	let g:edge_disable_italic_comment = 1

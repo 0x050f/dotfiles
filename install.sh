@@ -19,11 +19,12 @@ cpy_vimrc() {
 }
 
 setup_plugins() {
-	rm -rf $HOME/.vim/plugins/stdheader.vim
+	rm -rf $HOME/.vim/plugin/stdheader.vim
+	rm -rf $HOME/.vim/plugin/rainbow.vim
 	rm -rf $HOME/.vim/pack/plugins/start/lightline
 
-	mkdir -p $HOME/.vim/plugins
-	cp -f ./stdheader.vim $HOME/.vim/plugins/stdheader.vim
+	mkdir -p $HOME/.vim/plugin
+	cp -f ./stdheader.vim $HOME/.vim/plugin/stdheader.vim
 	if [[ -z "${FT_USER}" || $FT_USER != $user ]] ; then
 		if ! grep "export FT_USER=$user" $HOME/.zshrc ; then
 			echo "export FT_USER=$user" >> $HOME/.zshrc
@@ -34,6 +35,10 @@ setup_plugins() {
 			echo "export MAIL=$mail" >> $HOME/.zshrc
 		fi
 	fi
+	git clone https://github.com/frazrepo/vim-rainbow.git
+	cp -f ./vim-rainbow/plugin/rainbow.vim $HOME/.vim/plugin/rainbow.vim
+	rm -rf ./vim-rainbow
+
 	mkdir -p $HOME/.vim/pack/plugins/start/lightline
 	git clone https://github.com/itchyny/lightline.vim $HOME/.vim/pack/plugins/start/lightline
 }
