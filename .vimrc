@@ -6,11 +6,10 @@
 "    By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2020/02/04 02:23:08 by lmartin           #+#    #+#              "
-"    Updated: 2020/08/27 22:36:11 by lmartin          ###   ########.fr        "
+"    Updated: 2020/10/07 22:10:21 by root             ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
-criptencoding utf-8
 set encoding=utf-8
 
 " colors {{{
