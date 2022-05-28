@@ -3,6 +3,7 @@ set encoding=utf-8
 " colors {{{
 	set background=dark
 	syntax on
+	set re=0
 
 	"" colorscheme
 	let g:edge_style = 'neon'
