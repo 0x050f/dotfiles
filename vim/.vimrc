@@ -1,4 +1,5 @@
 set encoding=utf-8
+set iskeyword-=.
 
 " colors {{{
 	set background=dark
