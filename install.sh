@@ -6,7 +6,7 @@
 #    By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/04 04:43:15 by lmartin           #+#    #+#              #
-#    Updated: 2020/06/16 18:54:36 by lmartin          ###   ########.fr        #
+#    Updated: 2020/06/20 05:48:53 by lmartin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 #!/bin/bash
@@ -41,12 +41,14 @@ then
 	# header 42
 	mkdir -p $HOME/.vim/plugins
 	cp -f ./stdheader.vim $HOME/.vim/plugins/stdheader.vim
-	if [[ -z "${USER}" ]]
+	if [[ -z "${USER}" || $USER != $user ]]
 	then
+		export USER=$user
 		echo "export USER=$user" >> $HOME/.zshrc
 	fi
-	if [[ -z "${MAIL}" ]]
+	if [[ -z "${MAIL}" || $MAIL != $mail ]]
 	then
+		export MAIL=$mail
 		echo "export MAIL=$mail" >> $HOME/.zshrc
 	fi
 	## airline
