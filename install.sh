@@ -24,14 +24,14 @@ setup_plugins() {
 	rm -rf $HOME/.vim/pack/plugins/start/lightline
 
 	mkdir -p $HOME/.vim/plugin
-	if [[ ! -f /usr/share/vim/vim80/plugin/stdheader.vim ]] ; then
+	if [ ! -f /usr/share/vim/vim80/plugin/stdheader.vim ] ; then
 	cp -f ./stdheader.vim $HOME/.vim/plugin/stdheader.vim
-	if [[ -z "${FT_USER}" || $FT_USER != $user ]] ; then
+	if [ -z "${FT_USER}" ] || ! [ $FT_USER = $user ] ; then
 		if ! grep "export FT_USER=$user" $HOME/.zshrc ; then
 			echo "export FT_USER=$user" >> $HOME/.zshrc
 		fi
 	fi
-	if [[ -z "${MAIL}" || $MAIL != $mail ]] ; then
+	if [ -z "${MAIL}" ] || ! [ $MAIL = $mail ] ; then
 		if ! grep "export MAIL=$mail" $HOME/.zshrc ; then
 			echo "export MAIL=$mail" >> $HOME/.zshrc
 		fi
