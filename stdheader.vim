@@ -79,7 +79,7 @@ function! s:line(n)
 endfunction
 
 function! s:user()
-	let l:user = $USER
+	let l:user = $FT_USER
 	if strlen(l:user) == 0
 		let l:user = "marvin"
 	endif

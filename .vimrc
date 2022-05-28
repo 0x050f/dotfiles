@@ -15,9 +15,6 @@
 	set background=dark
 	syntax on
 
-	"" airline
-	let g:airline_theme = 'edge'
-
 	"" lightline
 	let g:lightline = {}
 	let g:lightline.colorscheme = 'edge'
@@ -25,6 +22,7 @@
 	"" colorscheme
 	let g:edge_style = 'neon'
 	let g:edge_disable_italic_comment = 1
+
 	colorscheme edge
 " }}}
 " cursor {{{
@@ -35,6 +33,8 @@
 " tabs & spaces {{{
 	set tabstop=4
 	set noexpandtab
+	set list listchars=tab:··>,space:·,trail:(,extends:>,precedes:<,nbsp:%,eol:$
+	set list
 " }}}
 " ui config {{{
 	set number
@@ -62,5 +62,7 @@
 	nnoremap B ^
 	nnoremap E $
 " }}}
+
+helptags $HOME/.vim/doc/
 
 " vim:foldmethod=marker:foldlevel=0
