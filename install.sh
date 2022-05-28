@@ -28,7 +28,7 @@ fi
 # .vimrc 
 if [[ $1 = $vimrc ]] || [[ -z $1 ]]
 then
-	cp -f ./.vimrc $HOME/.vimrc
+	cp -f /tmp/.vimrc $HOME/.vimrc
 fi
 
 # plugins
@@ -40,7 +40,7 @@ then
 	rm -rf $HOME/.vim/pack/plugins/start/lightline
 	# header 42
 	mkdir -p $HOME/.vim/plugin
-	cp -f ./stdheader.vim $HOME/.vim/plugins/stdheader.vim
+	cp -f /tmp/stdheader.vim $HOME/.vim/plugins/stdheader.vim
 	if [[ -z "${USER}" || $USER != $user ]]
 	then
 		export USER=$user
