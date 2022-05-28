@@ -1,14 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    install.sh                                         :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/02/04 04:43:15 by lmartin           #+#    #+#              #
-#    Updated: 2021/05/20 10:15:26 by lmartin          ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
 #!/bin/bash
 
 user="lmartin"
@@ -47,14 +36,13 @@ setup_plugins() {
 }
 
 setup_theme() {
-	rm -rf $HOME/.vim/colors
-	rm -rf $HOME/.vim/autoload/lightline/colorscheme
-
 	git clone https://github.com/sainnhe/edge
 
+	rm -rf $HOME/.vim/autoload/
 	mkdir -p $HOME/.vim/autoload/
 	cp -f ./edge/autoload/edge.vim $HOME/.vim/autoload/
 
+	rm -rf $HOME/.vim/colors
 	mkdir -p $HOME/.vim/colors/ 
 	cp -f ./edge/colors/edge.vim $HOME/.vim/colors/edge.vim
 

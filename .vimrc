@@ -1,15 +1,3 @@
-" **************************************************************************** "
-"                                                                              "
-"                                                         :::      ::::::::    "
-"    .vimrc                                             :+:      :+:    :+:    "
-"                                                     +:+ +:+         +:+      "
-"    By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+         "
-"                                                 +#+#+#+#+#+   +#+            "
-"    Created: 2020/02/04 02:23:08 by lmartin           #+#    #+#              "
-"    Updated: 2021/02/03 15:39:03 by lmartin          ###   ########.fr        "
-"                                                                              "
-" **************************************************************************** "
-
 set encoding=utf-8
 
 " colors {{{
@@ -18,9 +6,9 @@ set encoding=utf-8
 	syntax on
 
 	"" lightline
-	let g:lightline = {}
-	let g:lightline.colorscheme = 'edge'
-	set laststatus=2
+"	let g:lightline = {}
+"	let g:lightline.colorscheme = 'edge'
+"	set laststatus=2
 
 	"" colorscheme
 	let g:edge_style = 'neon'
