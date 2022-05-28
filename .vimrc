@@ -18,6 +18,7 @@
 	"" lightline
 	let g:lightline = {}
 	let g:lightline.colorscheme = 'edge'
+	set laststatus=2
 
 	"" colorscheme
 	let g:edge_style = 'neon'
