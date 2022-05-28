@@ -6,7 +6,7 @@
 "    By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2020/02/04 02:23:08 by lmartin           #+#    #+#              "
-"    Updated: 2020/09/02 16:33:35 by lmartin          ###   ########.fr        "
+"    Updated: 2020/08/27 22:36:11 by lmartin          ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -23,6 +23,7 @@
 	"" colorscheme
 	let g:edge_style = 'neon'
 	let g:edge_disable_italic_comment = 1
+	let g:edge_transparent_background = 1
 
 	colorscheme edge
 " }}}
@@ -34,11 +35,11 @@
 " whitespaces {{{
 	set tabstop=4
 	set softtabstop=4
-	set shiftwidth=4
+	set shiftwidth=0
 	set noexpandtab
 	set nofixendofline
-	set list listchars=tab:··>,space:·,trail:-,extends:>,precedes:<,nbsp:%,eol:$
 	set list
+	set listchars=tab:>·,space:·,trail:-,extends:>,precedes:<,nbsp:%,eol:$
 " }}}
 " ui config {{{
 	set number
