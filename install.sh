@@ -6,7 +6,7 @@
 #    By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/04 04:43:15 by lmartin           #+#    #+#              #
-#    Updated: 2020/08/19 07:35:39 by lmartin          ###   ########.fr        #
+#    Updated: 2020/08/19 21:12:44 by lmartin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 #!/bin/bash
@@ -15,15 +15,16 @@ user="lmartin"
 mail="$user@student.42.fr"
 
 cpy_vimrc() {
+	rm -rf $HOME/.vimrc
 	cp -f ./.vimrc $HOME/.vimrc
 }
 
 setup_plugins() {
-	rm -rf $HOME/.vim/plugin/stdheader.vim
-	rm -rf $HOME/.vim/plugin/rainbow.vim
+	rm -rf $HOME/.vim/plugin
 	rm -rf $HOME/.vim/pack/plugins/start/lightline
 
 	mkdir -p $HOME/.vim/plugin
+	if [[ ! -f /usr/share/vim/vim80/plugin/stdheader.vim ]] ; then
 	cp -f ./stdheader.vim $HOME/.vim/plugin/stdheader.vim
 	if [[ -z "${FT_USER}" || $FT_USER != $user ]] ; then
 		if ! grep "export FT_USER=$user" $HOME/.zshrc ; then
@@ -34,6 +35,7 @@ setup_plugins() {
 		if ! grep "export MAIL=$mail" $HOME/.zshrc ; then
 			echo "export MAIL=$mail" >> $HOME/.zshrc
 		fi
+	fi
 	fi
 	git clone https://github.com/frazrepo/vim-rainbow.git
 	cp -f ./vim-rainbow/plugin/rainbow.vim $HOME/.vim/plugin/rainbow.vim

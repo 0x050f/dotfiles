@@ -6,7 +6,7 @@
 "    By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2020/02/04 02:23:08 by lmartin           #+#    #+#              "
-"    Updated: 2020/08/19 19:52:15 by lmartin          ###   ########.fr        "
+"    Updated: 2020/08/19 22:48:38 by lmartin          ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -40,7 +40,7 @@
 	set tabstop=4
 	set noexpandtab
 	set nofixendofline
-	set list listchars=tab:··>,space:·,trail:(,extends:>,precedes:<,nbsp:%,eol:$
+	set list listchars=tab:··>,space:·,trail:-,extends:>,precedes:<,nbsp:%,eol:$
 	set list
 " }}}
 " ui config {{{
