@@ -38,6 +38,7 @@
 " }}}
 " ui config {{{
 	set number
+	set relativenumber
 	set showcmd
 	set lazyredraw
 	set showmatch
@@ -64,6 +65,8 @@
 " movement {{{
 	nnoremap j gj
 	nnoremap k gk
+	nnoremap B ^
+	nnoremap E $
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0

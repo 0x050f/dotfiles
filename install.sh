@@ -11,14 +11,26 @@
 # **************************************************************************** #
 #!/bin/bash
 
+# variables
+vimrc="vimrc"
+plugins="plugins"
+theme="theme"
+
+# unknow command
+if [[ -n $1 ]] && [[ $1 != $vimrc ]] && [[ $1 != $plugins ]] && [[ $1 != $theme ]]
+then
+	echo "$1: Unknown command - [$vimrc, $plugins, $theme]"
+	exit
+fi
+
 # .vimrc 
-if [[ $1 = 'vimrc' ]] || [[ -z $1 ]]
+if [[ $1 = $vimrc ]] || [[ -z $1 ]]
 then
 	cp -f ./.vimrc $HOME/.vimrc
 fi
 
 # plugins
-if [[ $1 = 'plugins' ]] || [[ -z $1 ]]
+if [[ $1 = $plugins ]] || [[ -z $1 ]]
 then
 	## delete if exist
 	rm -rf $HOME/.vim/pack/plugins/start/vim-airline
@@ -32,7 +44,7 @@ then
 fi
 
 #theme
-if [[ $1 = 'theme' ]] || [[ -z $1 ]]
+if [[ $1 = $theme ]] || [[ -z $1 ]]
 then
 	git clone https://github.com/sainnhe/edge
 
