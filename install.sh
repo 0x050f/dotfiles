@@ -6,7 +6,7 @@
 #    By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/04 04:43:15 by lmartin           #+#    #+#              #
-#    Updated: 2020/08/19 22:53:38 by lmartin          ###   ########.fr        #
+#    Updated: 2021/02/03 15:41:36 by lmartin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 #!/bin/bash
@@ -22,7 +22,6 @@ cpy_vimrc() {
 setup_plugins() {
 	rm -rf $HOME/.vim/plugin
 	rm -rf $HOME/.vim/pack/plugins/start/lightline
-
 	mkdir -p $HOME/.vim/plugin
 	if [ ! -f /usr/share/vim/vim80/plugin/stdheader.vim ] ; then
 	cp -f ./stdheader.vim $HOME/.vim/plugin/stdheader.vim
@@ -63,10 +62,19 @@ setup_theme() {
 	rm -rf ./edge
 }
 
+setup_languages() {
+	rm -rf $HOME/.vim/syntax
+	mkdir -p $HOME/.vim/syntax
+
+	git clone https://github.com/dart-lang/dart-vim-plugin
+	cp -f dart-vim-plugin/syntax/dart.vim $HOME/.vim/syntax/
+}
+
 main() {
 	cpy_vimrc
 	setup_plugins
 	setup_theme
+	setup_languages
 }
 
 main

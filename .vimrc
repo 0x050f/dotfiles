@@ -6,7 +6,7 @@
 "    By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2020/02/04 02:23:08 by lmartin           #+#    #+#              "
-"    Updated: 2020/10/07 22:10:21 by root             ###   ########.fr        "
+"    Updated: 2021/02/03 15:39:03 by lmartin          ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -68,6 +68,10 @@ set encoding=utf-8
 	nnoremap k gk
 	nnoremap B ^
 	nnoremap E $
+" }}}
+" languages {{{
+	" dart
+	au BufRead,BufNewFile *.dart set filetype=dart
 " }}}
 
 helptags $HOME/.vim/doc/
