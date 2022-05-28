@@ -6,7 +6,7 @@
 #    By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/04 04:43:15 by lmartin           #+#    #+#              #
-#    Updated: 2021/02/03 15:41:36 by lmartin          ###   ########.fr        #
+#    Updated: 2021/03/02 12:46:04 by lmartin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 #!/bin/bash
@@ -23,6 +23,10 @@ setup_plugins() {
 	rm -rf $HOME/.vim/plugin
 	rm -rf $HOME/.vim/pack/plugins/start/lightline
 	mkdir -p $HOME/.vim/plugin
+
+	curl https://www.vim.org/scripts/download_script.php?src_id=14064 > DoxygenToolkit.vim
+	cp -f ./DoxygenToolkit.vim $HOME/.vim/plugin/DoxygenToolkit.vim
+
 	if [ ! -f /usr/share/vim/vim80/plugin/stdheader.vim ] ; then
 	cp -f ./stdheader.vim $HOME/.vim/plugin/stdheader.vim
 	if [ -z "${FT_USER}" ] || ! [ $FT_USER = $user ] ; then
