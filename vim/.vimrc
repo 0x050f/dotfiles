@@ -50,6 +50,10 @@ set encoding=utf-8
 	nnoremap j gj
 	nnoremap k gk
 " }}}
+" syntax {{{
+	" nasm
+	set ft=nasm
+" }}}
 
 helptags $HOME/.vim/doc/
 
