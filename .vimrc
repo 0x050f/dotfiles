@@ -31,9 +31,10 @@
 	set cursorline
 	set mouse=a
 " }}}
-" tabs & spaces {{{
+" whitespaces {{{
 	set tabstop=4
 	set noexpandtab
+	set nofixendofline
 	set list listchars=tab:··>,space:·,trail:(,extends:>,precedes:<,nbsp:%,eol:$
 	set list
 " }}}
