@@ -1,12 +1,12 @@
 # .vimrc
 
-.vimrc & plugins install
+My simple vimrc config and auto installer
 
 ## Installation 
 
 ```sh
-git clone https://github.com/SimplySka/.vimrc /tmp/.vimrc
-source /tmp/.vimrc/install.sh
+git clone https://github.com/ska42/myvimrc /tmp/myvimrc
+sh /tmp/myvimrc
 ```
 
 ## Mapping
@@ -15,6 +15,4 @@ source /tmp/.vimrc/install.sh
 | --- | --- | ------- | 
 | j | gj | visual movement down |
 | k | gk | visual movement up |
-| B | ^ | begin of the line |
-| E | $ | end of the line |
 | \<space> | za | open fold |

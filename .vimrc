@@ -5,11 +5,6 @@ set encoding=utf-8
 	set background=dark
 	syntax on
 
-	"" lightline
-"	let g:lightline = {}
-"	let g:lightline.colorscheme = 'edge'
-"	set laststatus=2
-
 	"" colorscheme
 	let g:edge_style = 'neon'
 	let g:edge_disable_italic_comment = 1
@@ -54,12 +49,6 @@ set encoding=utf-8
 " movement {{{
 	nnoremap j gj
 	nnoremap k gk
-	nnoremap B ^
-	nnoremap E $
-" }}}
-" languages {{{
-	" dart
-	au BufRead,BufNewFile *.dart set filetype=dart
 " }}}
 
 helptags $HOME/.vim/doc/

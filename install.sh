@@ -1,74 +1,68 @@
 #!/bin/bash
 
-user="lmartin"
-mail="$user@student.42.fr"
+path=$(dirname "$0")
 
-cpy_vimrc() {
-	rm -rf $HOME/.vimrc
-	cp -f ./.vimrc $HOME/.vimrc
+setup_syntax() {
+	rm -rf $HOME/.vim/syntax
+	mkdir -p $HOME/.vim/syntax
+#	Install syntax languages here
+}
+
+setup_theme() {
+#	edge -> https://github.com/sainnhe/edge
+	curl -L https://github.com/sainnhe/edge/archive/refs/tags/v0.1.4.tar.gz --output $path/v0.1.4.tar.gz
+	tar -xvf $path/v0.1.4.tar.gz -C $path
+
+	rm -rf $HOME/.vim/autoload/
+	mkdir -p $HOME/.vim/autoload/
+	cp -f $path/edge-0.1.4/autoload/edge.vim $HOME/.vim/autoload/
+
+	rm -rf $HOME/.vim/colors
+	mkdir -p $HOME/.vim/colors/
+	cp -f $path/edge-0.1.4/colors/edge.vim $HOME/.vim/colors/edge.vim
+
+	mkdir -p $HOME/.vim/doc/
+	cp -f $path/edge-0.1.4/doc/edge.txt $HOME/.vim/doc/
 }
 
 setup_plugins() {
 	rm -rf $HOME/.vim/plugin
 	mkdir -p $HOME/.vim/plugin
-
-##	Doxygen
-#	curl https://www.vim.org/scripts/download_script.php?src_id=14064 > DoxygenToolkit.vim
-#	cp -f ./DoxygenToolkit.vim $HOME/.vim/plugin/DoxygenToolkit.vim
+##	42 header - works at 42 and everywhere else :)
 #
-##	42 header
+#	echo "Enter your 42 login:"
+#	read user
+#	mail="$user@student.42.fr"
 #	if [ ! -f /usr/share/vim/vim80/plugin/stdheader.vim ] ; then
-#	cp -f ./stdheader.vim $HOME/.vim/plugin/stdheader.vim
-#	if [ -z "${FT_USER}" ] || ! [ $FT_USER = $user ] ; then
-#		if ! grep "export FT_USER=$user" $HOME/.zshrc ; then
-#			echo "export FT_USER=$user" >> $HOME/.zshrc
+#		cp -f $path/custom_plugins/stdheader.vim $HOME/.vim/plugin/stdheader.vim
+#		if [ -z "${FT_USER}" ] || ! [ $FT_USER = $user ] ; then
+#			if ! grep "export FT_USER=$user" $HOME/.zshrc ; then
+#				echo "export FT_USER=$user" >> $HOME/.zshrc
+#			fi
+#		fi
+#		if [ -z "${MAIL}" ] || ! [ $MAIL = $mail ] ; then
+#			if ! grep "export MAIL=$mail" $HOME/.zshrc ; then
+#				echo "export MAIL=$mail" >> $HOME/.zshrc
+#			fi
 #		fi
 #	fi
-#	if [ -z "${MAIL}" ] || ! [ $MAIL = $mail ] ; then
-#		if ! grep "export MAIL=$mail" $HOME/.zshrc ; then
-#			echo "export MAIL=$mail" >> $HOME/.zshrc
-#		fi
-#	fi
-#	fi
-
-#	mkdir -p $HOME/.vim/pack/plugins/start/lightline
-#	git clone https://github.com/itchyny/lightline.vim $HOME/.vim/pack/plugins/start/lightline
 }
 
-setup_theme() {
-	git clone https://github.com/sainnhe/edge
-
-	rm -rf $HOME/.vim/autoload/
-	mkdir -p $HOME/.vim/autoload/
-	cp -f ./edge/autoload/edge.vim $HOME/.vim/autoload/
-
-	rm -rf $HOME/.vim/colors
-	mkdir -p $HOME/.vim/colors/ 
-	cp -f ./edge/colors/edge.vim $HOME/.vim/colors/edge.vim
-
-	mkdir -p $HOME/.vim/doc/
-	cp -f ./edge/doc/edge.txt $HOME/.vim/doc/
-
-#	mkdir -p $HOME/.vim/autoload/lightline/colorscheme/
-#	cp -f ./edge/autoload/lightline/colorscheme/* $HOME/.vim/autoload/lightline/colorscheme/
-
-	rm -rf ./edge
-}
-
-setup_languages() {
-	rm -rf $HOME/.vim/syntax
-	mkdir -p $HOME/.vim/syntax
-
-##	Clone and add new languages syntax here
-#	git clone https://github.com/dart-lang/dart-vim-plugin
-#	cp -f dart-vim-plugin/syntax/dart.vim $HOME/.vim/syntax/
+cpy_vimrc() {
+	rm -rf $HOME/.vimrc
+	cp -f $path/.vimrc $HOME/.vimrc
 }
 
 main() {
+	if ! which vim &> /dev/null
+	then
+		echo "vim not found"
+		exit 1
+	fi
 	cpy_vimrc
 	setup_plugins
 	setup_theme
-	setup_languages
+	setup_syntax
 }
 
 main
