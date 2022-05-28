@@ -6,7 +6,7 @@
 "    By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2020/02/04 02:23:08 by lmartin           #+#    #+#              "
-"    Updated: 2020/08/19 22:48:38 by lmartin          ###   ########.fr        "
+"    Updated: 2020/08/19 22:53:10 by lmartin          ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -19,11 +19,6 @@
 	let g:lightline = {}
 	let g:lightline.colorscheme = 'edge'
 	set laststatus=2
-
-	"" vim-rainbow
-	let g:rainbow_active = 1
-	let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
-	let g:rainbow_ctermfgs = [ 'lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
 
 	"" colorscheme
 	let g:edge_style = 'neon'

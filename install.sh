@@ -6,7 +6,7 @@
 #    By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/04 04:43:15 by lmartin           #+#    #+#              #
-#    Updated: 2020/08/19 21:12:44 by lmartin          ###   ########.fr        #
+#    Updated: 2020/08/19 22:53:38 by lmartin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 #!/bin/bash
@@ -37,9 +37,6 @@ setup_plugins() {
 		fi
 	fi
 	fi
-	git clone https://github.com/frazrepo/vim-rainbow.git
-	cp -f ./vim-rainbow/plugin/rainbow.vim $HOME/.vim/plugin/rainbow.vim
-	rm -rf ./vim-rainbow
 
 	mkdir -p $HOME/.vim/pack/plugins/start/lightline
 	git clone https://github.com/itchyny/lightline.vim $HOME/.vim/pack/plugins/start/lightline
