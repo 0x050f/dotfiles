@@ -6,7 +6,7 @@
 "    By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2020/02/04 02:23:08 by lmartin           #+#    #+#              "
-"    Updated: 2020/08/19 22:53:10 by lmartin          ###   ########.fr        "
+"    Updated: 2020/08/27 22:36:11 by lmartin          ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -33,6 +33,8 @@
 " }}}
 " whitespaces {{{
 	set tabstop=4
+	set softtabstop=4
+	set shiftwidth=0
 	set noexpandtab
 	set nofixendofline
 	set list listchars=tab:··>,space:·,trail:-,extends:>,precedes:<,nbsp:%,eol:$
