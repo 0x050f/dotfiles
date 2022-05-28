@@ -10,6 +10,9 @@
 "                                                                              "
 " **************************************************************************** "
 
+criptencoding utf-8
+set encoding=utf-8
+
 " colors {{{
 	set termguicolors
 	set background=dark
