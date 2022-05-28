@@ -42,6 +42,9 @@
 	set lazyredraw
 	set showmatch
 	set colorcolumn=80
+	let g:netrw_winsize=20
+	let g:netrw_banner=0
+	let g:netrw_liststyle=3
 " }}}
 " search {{{
 	set hlsearch
