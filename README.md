@@ -2,6 +2,8 @@
 
 .vimrc & plugins install
 
+![](https://i.ibb.co/1JHgqzZ/Screen-Shot-2020-02-05-at-1-22-41-AM.png)
+
 ## Installation 
 
 ```sh
@@ -17,5 +19,5 @@ sh /tmp/.vimrc/install.sh
 | k | gk | visual movement up |
 | B | ^ | begin of the line |
 | E | $ | end of the line |
-| <A-t> | :Le | :Lexplore to open/close files tree |
-| <space> | za | open fold |
+| \<A-t> | :Le | :Lexplore to open/close files tree |
+| \<space> | za | open fold |
