@@ -6,7 +6,7 @@ My simple vimrc config and auto installer
 
 ```sh
 git clone https://github.com/ska42/myvimrc /tmp/myvimrc
-sh /tmp/myvimrc
+./tmp/myvimrc
 ```
 
 ## Mapping

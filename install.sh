@@ -53,12 +53,19 @@ cpy_vimrc() {
 	cp -f $path/.vimrc $HOME/.vimrc
 }
 
+check_binaries() {
+	binaries=(vim curl tar)
+	for binary in ${binaries[@]}; do
+		if ! command -v $binary &> /dev/null
+		then
+			echo "$binary not found"
+			exit 1
+		fi
+	done
+}
+
 main() {
-	if ! which vim &> /dev/null
-	then
-		echo "vim not found"
-		exit 1
-	fi
+	check_binaries
 	cpy_vimrc
 	setup_plugins
 	setup_theme
