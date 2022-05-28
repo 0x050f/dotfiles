@@ -11,53 +11,53 @@
 " **************************************************************************** "
 
 " colors {{{
-set termguicolors
-set background=dark
-syntax on
+	set termguicolors
+	set background=dark
+	syntax on
 
-"" airline
-let g:airline_theme = 'edge'
+	"" airline
+	let g:airline_theme = 'edge'
 
-"" lightline
-let g:lightline = {}
-let g:lightline.colorscheme = 'edge'
+	"" lightline
+	let g:lightline = {}
+	let g:lightline.colorscheme = 'edge'
 
-"" colorscheme
-let g:edge_style = 'neon'
-let g:edge_disable_italic_comment = 1
-colorscheme edge
+	"" colorscheme
+	let g:edge_style = 'neon'
+	let g:edge_disable_italic_comment = 1
+	colorscheme edge
 " }}}
 " cursor {{{
-set ruler
-set cursorline
-set mouse=a
+	set ruler
+	set cursorline
+	set mouse=a
 " }}}
 " tabs & spaces {{{
-set tabstop=4
-set noexpandtab
+	set tabstop=4
+	set noexpandtab
 " }}}
 " ui config {{{
-set number
-set showcmd
-set lazyredraw
-set showmatch
-set colorcolumn=80
+	set number
+	set showcmd
+	set lazyredraw
+	set showmatch
+	set colorcolumn=80
 " }}}
 " search {{{
-set hlsearch
-set incsearch
+	set hlsearch
+	set incsearch
 " }}}
 " folding {{{
-set foldenable
-set foldlevelstart=10
-set foldnestmax=10
-nnoremap <space> za
-set foldmethod=indent
-set fillchars=fold:\ 
+	set foldenable
+	set foldlevelstart=10
+	set foldnestmax=10
+	nnoremap <space> za
+	set foldmethod=indent
+	set fillchars=fold:\ 
 " }}}
 " movement {{{
-nnoremap j gj
-nnoremap k gk
+	nnoremap j gj
+	nnoremap k gk
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
