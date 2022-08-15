@@ -1,4 +1,8 @@
-alias ls="ls --color"
+export LANGUAGE="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export PATH="/usr/sbin/:/home/$USER/.local/bin:$PATH"
+
+alias ls="ls --color=auto"
 
 BOLD="\033[1m"
 NORMAL="\033[0m"
