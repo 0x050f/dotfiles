@@ -1,6 +1,7 @@
 export LANGUAGE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export PATH="/usr/sbin/:/home/$USER/.local/bin:$PATH"
+export SHELL="/bin/bash"
 
 alias ls="ls --color=auto"
 
