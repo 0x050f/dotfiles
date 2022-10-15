@@ -14,7 +14,7 @@ LYELLOW="\[\033[93m\]"
 LBLUE="\[\033[94m\]"
 
 get_git_branch() {
-	git branch --show-current 2>/dev/null | awk '{print " ("$1")";}'
+	git branch 2> /dev/null | tr -d '(' | tr -d ')' | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
 }
 
-export PS1="${BOLD}[${LRED}\u${LYELLOW}@${LBLUE}\h${DEFAULT}]\$ ${LBLUE}\W${DEFAULT}\$(get_git_branch)${NORMAL} "
+export PS1="${BOLD}[${LRED}\u${LYELLOW}@${LBLUE}\h${DEFAULT}]\$ ${LBLUE}\W ${DEFAULT}\$(get_git_branch)${NORMAL}"
